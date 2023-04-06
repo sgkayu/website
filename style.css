@@ -1,0 +1,110 @@
+body {
+  font-family: 'Poppins', Sans-Serif;
+  color: #fff;
+  background-color: #101010;
+  text-decoration: none;
+}
+* {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  background-color: rgba(0,200,249,0.5);
+  justify-content: space-between;
+  border-bottom: 2px solid #fff;
+  align-items: center;
+  top: 0;
+  padding:1.4rem 10%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .okp {
+  color: #fff;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 800;
+}
+.navbar .okp span {
+  color: rgb(0,200,249);
+}
+.navbar .okp a:hover {
+  color: rgb(0,200,249);
+}
+
+.navbar .navigasi a {
+  color: #fff;
+  margin: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: inline-block;
+}
+.navigasi a:hover {
+  color: rgb(0,200,249);
+}
+.navigasi a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #fff;
+  transition: 0.7s;
+  transform: scalex(0);
+}
+.navigasi a:hover::after {
+  transform: scalex(0.5);
+}
+.navbar .nav-nav a {
+  color: #fff;
+  margin: 0.0.5rem;
+}
+.navbar .nav-nav a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .nav-nav a:hover {
+  color: rgb(0,200,249);
+}
+
+#menu {
+  display: none;
+}
+
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 77.7%;
+  }
+  .navbar .okp {
+    font-size: 3rem;
+  }
+  
+  
+#menu {
+  display: inline-block;
+ }
+  .navbar .navigasi {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    background-color: #fff;
+    width: 50%;
+    height: 100vh;
+    transition: 0.5s;
+  }
+  .navbar .navigasi.active {
+    left: 57%;
+  }
+  .navbar .navigasi a {
+    color: #101010;
+    font-size: 1.7rem;
+    display: block;
+    padding: 0.7rem;
+    margin: 1.5rem;
+  }
+  .navbar .navigasi a::after {
+    border-bottom: 2px solid #101010;
+    transform-origin: 0 0;
+  }
+}
